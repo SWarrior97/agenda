@@ -18,21 +18,34 @@
 	<div class="limiter">
 		<div class="container-login100"  style="background-image:url(../images/bg-01.jpg);">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+					@csrf
 					<span class="login100-form-title p-b-49">
 						Login
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Username">
+						<input class="input100 @error('username') is-invalid @enderror" type="text" name="username" placeholder="Username">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
+
+						@error('email')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+						@enderror
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100 @error('password') is-invalid @enderror" type="password" name="password" placeholder="Password">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
+
+						@error('password')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+						@enderror
 					</div>
 					
 					<div class="text-right p-t-8 p-b-31">
