@@ -1,5 +1,7 @@
 {
+    "/js/agenda.js": "/js/agenda.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/js/main.js": "/js/main.js"
+    "/js/main.js": "/js/main.js",
+    "/js/modal.js": "/js/modal.js"
 }

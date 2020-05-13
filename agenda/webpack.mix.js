@@ -13,4 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .js('resources/js/main.js', 'public/js');
+    .js('resources/js/main.js', 'public/js')
+    .js('resources/js/agenda.js', 'public/js')
+    .js('resources/js/modal.js', 'public/js');
