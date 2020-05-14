@@ -26,13 +26,23 @@ document.addEventListener('DOMContentLoaded', function() {
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       eventLimit: true, // allow "more" link when too many events
-      events:[],
+      events: {
+        url: '/getEvents/'+userID,
+        type: 'GET',
+        error: function() {
+            alert('there was an error while fetching events!');
+        },
+        success: function(reply) {
+            console.log(reply);
+        }
+    },
       eventDrop: function(event,dayDelta,minuteDelta,allDay,revertFunc) {
       },dateClick: function(date, jsEvent, view) {
           console.log(date.dateStr);
           $('#myModal').modal('show');
           $('#dataEvento').val(date.dateStr);
       },eventClick: function(event, jsEvent, view){
+        event.preventDefault();
       },
     });
 
@@ -41,5 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  $(function() {
+    
 
-  
+  });

@@ -15176,17 +15176,29 @@ document.addEventListener('DOMContentLoaded', function () {
     editable: true,
     eventLimit: true,
     // allow "more" link when too many events
-    events: [],
+    events: {
+      url: '/getEvents/' + userID,
+      type: 'GET',
+      error: function error() {
+        alert('there was an error while fetching events!');
+      },
+      success: function success(reply) {
+        console.log(reply);
+      }
+    },
     eventDrop: function eventDrop(event, dayDelta, minuteDelta, allDay, revertFunc) {},
     dateClick: function dateClick(date, jsEvent, view) {
       console.log(date.dateStr);
       $('#myModal').modal('show');
       $('#dataEvento').val(date.dateStr);
     },
-    eventClick: function eventClick(event, jsEvent, view) {}
+    eventClick: function eventClick(event, jsEvent, view) {
+      event.preventDefault();
+    }
   });
   calendar.render();
 });
+$(function () {});
 
 /***/ }),
 

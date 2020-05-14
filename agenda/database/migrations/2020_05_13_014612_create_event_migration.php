@@ -17,11 +17,11 @@ class CreateEventMigration extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('data');
-            $table->string('hora_incio');
+            $table->string('hora_inicio');
             $table->string('hora_fim');
             $table->string('local');
-            $table->string('url');
-            $table->string('description');
+            $table->string('url')->nullable();
+            $table->string('description')->nullable();
             $table->integer('user_id')->unsigned()->index();
             $table->timestamps();
         });
