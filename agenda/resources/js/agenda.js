@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       },dateClick: function(date, jsEvent, view) {
           console.log(date.dateStr);
-          $('#myModal').modal('show');
           $('#dataEvento').val(date.dateStr);
+          $('#myModal').modal('show');
       },eventClick: function(event, jsEvent, view){
         $.ajax({
           type : 'GET',
@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var btn = document.getElementById("btnCancelarEventDetail");
     var btnRemover = document.getElementById("btnRemoverEvent");
     
-
     btn.onclick = function() {
       $('#eventDetails').modal('hide');
     }

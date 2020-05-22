@@ -15195,8 +15195,8 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     dateClick: function dateClick(date, jsEvent, view) {
       console.log(date.dateStr);
-      $('#myModal').modal('show');
       $('#dataEvento').val(date.dateStr);
+      $('#myModal').modal('show');
     },
     eventClick: function eventClick(event, jsEvent, view) {
       $.ajax({
