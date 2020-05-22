@@ -17,6 +17,43 @@
                     <div id='calendar'></div>
 
 
+                    <div class="modal fade" id='eventDetails' >
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title" id="eventTitleDetail"></h4>
+                            </div>
+                            <div class="modal-body">
+                                <span class="label-input100">Name:</span>
+                                <input id="eventoNameDetail" class="input100 @error('name') is-invalid @enderror" type="text" name="name" svalue="" readonly>
+                                <br><br>
+                                <span class="label-input100">Data:</span>
+                                <input id="eventoDataDetail" class="input100 @error('data') is-invalid @enderror" type="date" name="data" placeholder="Data" readonly>
+                                <br><br>
+                                <span class="label-input100">Local:</span>
+                                <input id="eventolocalDetail" class="input100 @error('local') is-invalid @enderror" type="text" name="local" placeholder="Local" readonly>
+                                <br><br>
+                                <span class="label-input100">Descriçao:</span>
+                                <input id="eventodescricaoDetail" class="input100 @error('descricao') is-invalid @enderror" type="text" name="descricao" placeholder="Descriçao" readonly>
+                                <br><br>
+                                <div id="hora_inicio">
+                                <span class="label-input100">Hora Inicio:</span>
+                                <input id="eventoHoraInicioDetail" class="input100 @error('hora_inicio') is-invalid @enderror" type="time" name="hora_inicio" placeholder="Hora de Inicio" readonly>
+                                <br><br>
+                                <span class="label-input100">Hora Fim:</span>
+                                <input id="eventoHoraFimDetail" class="input100 @error('hora_fim') is-invalid @enderror" type="time" name="hora_fim" placeholder="Hora de fim" readonly>
+                                <br><br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" id="btnRemoverEvent" class="btn btn-xs btn-primary">Remover Evento</button>
+                                <button id="btnCancelarEventDetail" class="btn btn-xs btn-danger">Cancelar</button>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+
 
                     <!-- The Modal -->
                     <div id="myModal" class="modal">

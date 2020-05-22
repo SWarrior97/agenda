@@ -23,3 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/event', 'eventController@create')->name('create.event');
 
 Route::get('/getEvents/{id}','eventController@getEventosByUser');
+
+Route::get('/getEvent/{id}','eventController@getEventByID');
+
+Route::post('/removeEvent/{id}', 'eventController@removeEvent');

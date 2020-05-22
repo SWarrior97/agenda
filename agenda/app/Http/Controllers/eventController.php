@@ -47,10 +47,23 @@ class eventController extends Controller
             $url = $ev->url;
             $descricao = $ev->description;
 
-            $event = array('id' => $ev->id, 'title' => $nome, 'description' => $descricao, 'start' => $hora_inicio,'end'=> $hora_fim,'url'=>$url);
+            $event = array('id' => $ev->id, 'title' => $nome, 'description' => $descricao, 'start' => $hora_inicio,'end'=> $hora_fim);
             array_push($eventsReturn, $event);
         }
 
         return $eventsReturn;
+    }
+
+    public function getEventByID($id){
+        $event = Event::find($id);
+
+
+        return $event;
+    }
+
+    public function removeEvent($id){
+        $event = Event::find($id);
+
+        $event->delete();
     }
 }
