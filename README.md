@@ -6,7 +6,7 @@ Projet to add event and schedule than. Project based on the laravel framework.
 ### Clone repository
 
 ```shell
-git clone https://github.com/SWarrior97/OSInt.git
+git clone https://github.com/SWarrior97/agenda.git
 ```
 
 
