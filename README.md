@@ -19,3 +19,12 @@ When finished
 ```shell
 npm install
 ```
+
+### setup database
+To setup database you must copy the .env.example file and rename it to .env than fill the necessary informations
+
+### Run
+To run the app it is possible to use artisan for that
+```shell
+php artisan serve
+```
